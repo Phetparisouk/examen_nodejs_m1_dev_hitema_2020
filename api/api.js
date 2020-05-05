@@ -25,10 +25,10 @@ v1.put('/people/:id', async (request, response) => {
     const people = request.body;
 
     const is_zero = 0; // no magic number
-    const isFind = people.name && people.name.length > is_zero;
+    const isOK = people.name.length > is_zero;
 
     const bad_req = 400; //no magic number
-    isFind ? response.sendStatus(peopleService.updatePeople(id, people)) : response.sendStatus(bad_req);
+    isOK ? response.sendStatus(peopleService.updatePeople(id, people)) : response.sendStatus(bad_req);
 });
 
 

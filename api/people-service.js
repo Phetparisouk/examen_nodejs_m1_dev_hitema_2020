@@ -28,14 +28,14 @@ module.exports = class PeopleService {
         //}
 
         //FILTRE non reussi
-        //let filtered = []
+        //let filtre = []
         //this.peoples.forEach(people => {
         //    for (const key in filters) {
         //        if (people[key] === filters[key]) {
-        //            filtered.push(people)
+        //            filtre.push(people)
         //        }
         //    }
         //});
-        //return filtered;
+        //return filtre;
     }
 }
