@@ -21,7 +21,7 @@ module.exports.digestAuth = (request, response, next) => {
     const isValid = authentication[0] === 'node' && authentication[1] === sha1Encode('password');
 
     const error_401  = 401; //varibale pour resoudre le probleme de "no magic number : 401"
-    isValid ? next() : response.sendStatus(error_401);                                       //isValid ? next() : response.sendStatus(401);
+    isValid ? next() : response.sendStatus(error_401);                                              //isValid ? next() : response.sendStatus(401);
 
 }
 
