@@ -15,7 +15,7 @@ app.use(bodyParser.json());
 app.use('/api/v1', v1);
 
 //Liste de tout les gens, utiliser la route /peoples 
-v1.get('/peoples', async (request, response) => {
+v1.get('/people', async (request, response) => {
     const peoples = await peopleService.getPeople();
     response.send(peoples);
 });
