@@ -1,5 +1,8 @@
 const fs = require('fs');
-const HttpStatus = require('http-status-codes');
+//const HttpStatus = require('http-status-codes'); ne fonctionne pas, je ne sais pas pourquoi
+//alternative a HttpStatus :
+const NOT_FOUND = 404;
+const OK = 200;
 
 module.exports = class PeopleService {
     constructor() {
@@ -10,10 +13,10 @@ module.exports = class PeopleService {
         // To be implemented!
         let target = this.peoples[id]
         if (target === null) {
-            return HttpStatus.NOT_FOUND;
+            return NOT_FOUND;
         }
         this.peoples[id] = people;
-        return HttpStatus.OK;
+        return OK;
     }
     
     getPeople(filters) {
